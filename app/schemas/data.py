@@ -1,10 +1,16 @@
-from pydantic import BaseModel
-from typing import List
+from pydantic import BaseModel, PositiveInt, validator
+
 
 class Input(BaseModel):
-    n: int
-    arr: List[int]
+    n: PositiveInt
+    arr: list[int]
+
+    @validator("arr")
+    def check_arr_length(cls, v, values):
+        if values.get("n") and len(v) < values["n"]:
+            raise ValueError("length of array should be more than n")
+        return v
 
 
 class Output(BaseModel):
-    arr: List[int]
+    arr: list[int]

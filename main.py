@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from app.routers import topN
 
+from app.routers import topN
 
 app = FastAPI()
 
