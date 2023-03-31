@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from app.routers import topN
 
+from app.routers import top_n
 
 app = FastAPI()
 
-app.include_router(topN.router)
+app.include_router(top_n.router)
