@@ -25,3 +25,38 @@ Create a Python web application, using Django or other frameworks, to search for
 - Architecture, design, logic, and efficiency
 - Coding principles
 - Documentation and technical writing skills
+
+
+# Project Description
+This project is a simple Python application that provides an API to return the top n elements of an array. It was built using FastAPI and Python 3.10.
+
+## Prerequisites
+1. Python 3.10 or higher
+2. Poetry
+## Installation
+Clone the repository:
+```
+git clone git@github.com:Element-Ext/offiste-assignment-U3WFQ2P9.git
+```
+Change into the project directory:
+```
+cd offiste-assignment-U3WFQ2P9
+```
+Create a virtual environment:
+```
+poetry shell
+```
+Install dependencies with Poetry:
+```
+poetry install
+```
+Start the application with Poetry:
+```
+poetry run uvicorn main:app --reload
+```
+Navigate to http://localhost:8000/docs in your web browser to view the API documentation.
+## Testing
+Run the following command in the project directory to execute the tests:
+```
+poetry run pytest
+```
